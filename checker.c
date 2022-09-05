@@ -5,7 +5,7 @@
  * @buf: buffer string
  * Return: an integer
  */
-int checker(char **cmd, char *buf)
+int checker(char **cmd, char *buf, char *arg)
 {
 	int i = 0;
 	char *a, *str;
@@ -28,8 +28,16 @@ int checker(char **cmd, char *buf)
 	}
 	else if (**cmd == '/')
 	{
-		execute(cmd[0], cmd);
-		return (1);
+		if (access(*cmd, F_OK & X_OK) == 0)
+		{
+			execute(cmd[0], cmd);
+			return (1);
+		}
+		else
+		{
+			perror(arg);
+			return (1);
+		}
 	}
 	return (0);
 }

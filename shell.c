@@ -13,8 +13,8 @@ int main(int argc, char *argv[], char *envp[])
 	char *path = NULL, *line = NULL, *expath = NULL;
 	size_t bufsize = 0;
 	ssize_t linesize = 0;
-	envp = envp;
 
+	envp = envp;
 	if (argc < 1)
 		return (-1);
 	while (1)
@@ -28,7 +28,7 @@ int main(int argc, char *argv[], char *envp[])
 		commands = tokenizer(line);
 		if (commands == NULL || *commands == NULL || **commands == '\0')
 			continue;
-		if (checker(commands, line))
+		if (checker(commands, line, argv[0]))
 			continue;
 		path = find_path();
 		paths = tokenizer(path);

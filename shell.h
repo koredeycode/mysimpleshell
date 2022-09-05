@@ -14,7 +14,7 @@ void print_env(void);
 void exit_cmd(char **commands, char *str);
 int _cd(char *str);
 int check_builtin(char **command, char *line);
-int checker(char **cmd, char *buf);
+int checker(char **cmd, char *buf, char *arg);
 void execute(char *expath, char **commands);
 char *find_path(void);
 void freebuffs(char **buff);
