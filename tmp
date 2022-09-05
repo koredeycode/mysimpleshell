@@ -1,0 +1,8 @@
+/**
+*		if (expath != NULL)
+*			free(expath);
+*		if (paths != NULL)
+*			freebuffs(paths);
+*		if (commands != NULL)
+*			freebuffs(commands);
+*/
