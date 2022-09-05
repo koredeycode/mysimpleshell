@@ -13,6 +13,7 @@ int main(int argc, char *argv[], char *envp[])
 	char *path = NULL, *line = NULL, *expath = NULL;
 	size_t bufsize = 0;
 	ssize_t linesize = 0;
+	envp = envp;
 
 	if (argc < 1)
 		return (-1);

@@ -21,7 +21,7 @@ char *find_path(void)
 			}
 			return (path);
 		}
-		*ennv++;
+		*ennv = *ennv + 1;
 	}
 	return (NULL);
 }
